@@ -175,9 +175,9 @@ struct aws_nitro_enclaves_rest_client *aws_nitro_enclaves_rest_client_new(
     struct aws_socket_options socket_options = {
         .type = AWS_SOCKET_STREAM,
         .connect_timeout_ms = CONNECT_TIMEOUT_MS,
-        .keep_alive_timeout_sec = 2,
+        .keep_alive_timeout_sec = 0,
         .keepalive = true,
-        .keep_alive_interval_sec = 2,
+        .keep_alive_interval_sec = 0,
     };
 
     struct aws_http_client_connection_options http_client_options = {
